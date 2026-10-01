@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4A0F7DF6306A9BDE0068C30B /* PhotoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0F7DF5306A9BCF0068C30B /* PhotoCache.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4A369BF43062FCD300A485A5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A0F7DF5306A9BCF0068C30B /* PhotoCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCache.swift; sourceTree = "<group>"; };
 		4A369BE63062FCD100A485A5 /* PhotoGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A369BF33062FCD300A485A5 /* PhotoGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A369BFD3062FCD300A485A5 /* PhotoGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +100,7 @@
 		4A369BDD3062FCD100A485A5 = {
 			isa = PBXGroup;
 			children = (
+				4A0F7DF5306A9BCF0068C30B /* PhotoCache.swift */,
 				4A369C2430630B1A00A485A5 /* PhotoDetailView */,
 				4A369C2030630AE600A485A5 /* PhotoGalleryView */,
 				4A369C1B3063032A00A485A5 /* PhotoViewModel */,
@@ -264,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0F7DF6306A9BDE0068C30B /* PhotoCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

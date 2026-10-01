@@ -2,29 +2,36 @@ import SwiftUI
 
 struct PhotoDetailView: View {
     
-    let photo: Photo
+    let photoID: String
     
     var body: some View {
-        VStack(spacing: 20) {
+        
+        if let photo = PhotoCache.shared.getPhoto(id: photoID) {
             
-            AsyncImage(url: URL(string: photo.url)) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-            } placeholder: {
-                ProgressView()
+            VStack(spacing: 20) {
+                
+                AsyncImage(url: URL(string: photo.url)) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                } placeholder: {
+                    ProgressView()
+                }
+                
+                Text(photo.name)
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Text("Photo ID: \(photo.id)")
+                    .foregroundColor(.gray)
+                
+                Spacer()
             }
+            .padding()
+            .navigationTitle("Photo Details")
             
-            Text(photo.name)
-                .font(.title)
-                .fontWeight(.bold)
-            
-            Text("Photo ID: \(photo.id)")
-                .foregroundColor(.gray)
-            
-            Spacer()
+        } else {
+            Text("Photo not found in cache")
         }
-        .padding()
-        .navigationTitle("Photo Details")
     }
 }
