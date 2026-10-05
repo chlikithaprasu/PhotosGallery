@@ -25,8 +25,6 @@ class PhotoViewModel {
         state = .loading
 
         if let cachedPhotos = PhotoCache.shared.get(page: currentPage) {
-            
-            // STEP 2: Found in cache
             photos = cachedPhotos
             state = .success
             return
@@ -34,7 +32,6 @@ class PhotoViewModel {
 
         do {
             
-            // STEP 4: Call API
             let fetchedPhotos = try await photoService.fetchPhotos(
                 page: currentPage
             )
@@ -58,7 +55,6 @@ class PhotoViewModel {
         do{
             photos = try await photoService.fetchPhotos(page: currentPage)
         }catch is CancellationError {
-            // Ignore cancellation during refresh
             } catch {
             state = .error(error.localizedDescription)
             }
